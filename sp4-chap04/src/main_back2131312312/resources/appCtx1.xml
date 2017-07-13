@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+            http://www.springframework.org/schema/beans     
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/tx 
+            http://www.springframework.org/schema/tx/spring-tx.xsd
+            http://www.springframework.org/schema/context 
+            http://www.springframework.org/schema/context/spring-context.xsd">
+            
+
+	<context:annotation-config />
+	
+	<bean id="memberDao" class="spring.MemberDao">
+	</bean>
+	
+	<!-- MemberRegisterService의 생성자에 @Autowired 애노테이션을 적용했으므로 
+	     constructor-arg 태그를 사용하지 않아도ㅡ, 생성자에서 필요로 하는 MemberDao 타입의 빈 객체인
+	     memberDao가 생성자에 전달된다 -->
+	<bean id="memberRegSvc" class="spring.MemberRegisterService">
+	</bean>  
+	
+	<bean id="memberPrinter" class="spring.MemberPrinter">
+	</bean>
+	
+	<bean id="infoPrinter" class="spring.MemberInfoPrinter">
+	</bean>   
+</beans>
