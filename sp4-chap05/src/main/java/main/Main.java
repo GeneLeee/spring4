@@ -22,9 +22,8 @@ import spring.VersionPrinter;
 
 public class Main {
 	
-	//phase1
+	//XML이 아닌 자바 설정 파일을 이용할 경우.
 	public static void main(String[] args) throws IOException{
-		//XML이 아닌 자바 설정 파일을 이용할 경우.
 		ApplicationContext ctx = new AnnotationConfigApplicationContext(JavaConfig.class);
 		
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
