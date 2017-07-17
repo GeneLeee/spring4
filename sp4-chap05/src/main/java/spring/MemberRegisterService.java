@@ -9,8 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class MemberRegisterService {
 	//@Resource(name="memberDao")
 	private MemberDao memberDao;
-	
-	@Autowired(required=false)
+
 	public MemberRegisterService(MemberDao memberDao){
 		this.memberDao = memberDao;
 	}

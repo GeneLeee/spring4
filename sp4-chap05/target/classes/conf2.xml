@@ -16,8 +16,6 @@
 	
 	<!-- Part.2 -->
 	
-	<context:annotation-config/>
-	
 	<!-- 생성자 방식 -->
 	<bean id="listPrinter" class="spring.MemberListPrinter">
 		<constructor-arg ref="memberDao" />

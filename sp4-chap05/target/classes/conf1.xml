@@ -16,7 +16,6 @@
 	
 	<!-- import를 사용하여 하나의 XML 설정에서 다른 XML설정을 함께 사용할 수 있다. -->
 	<import resource="classpath:conf2.xml"/>
-	<context:annotation-config />
 	
 	<!-- Par1 -->
 	<bean id="memberDao" class="spring.MemberDao"/>

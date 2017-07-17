@@ -5,10 +5,8 @@ import javax.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 
 public class ChangePasswordService {
-	//@Resource(name="memberDao")
 	private MemberDao memberDao;
 	
-	@Autowired
 	public ChangePasswordService(MemberDao memberDao){
 		this.memberDao = memberDao;
 	}
