@@ -24,6 +24,4 @@ public class Client implements InitializingBean, DisposableBean{
 	public void destroy() throws Exception {
 		System.out.println("Client.destroy() 실행");
 	}
-	
-
 }
