@@ -20,5 +20,6 @@ public class MemberDao {
 	
 	public Collection<Member> selectAll(){
 		//TODO 구현해야함.
+		return null;
 	}
 }
