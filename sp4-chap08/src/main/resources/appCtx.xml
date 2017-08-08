@@ -21,4 +21,7 @@
 		<property name="maxIdleTime" value="600" />
 	</bean>
 	
+	<bean id = "memberDao" class="spring.MemberDao" >
+		<constructor-arg ref="dataSource" />
+	</bean>
 </beans>
