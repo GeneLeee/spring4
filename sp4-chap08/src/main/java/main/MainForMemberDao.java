@@ -7,9 +7,11 @@ import java.util.List;
 import org.aspectj.apache.bcel.classfile.Signature;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
+import org.springframework.transaction.annotation.Transactional;
 
 import spring.Member;
 import spring.MemberDao;
+import spring.MemberNotFoundException;
 
 public class MainForMemberDao {
 	private static MemberDao memberDao;
@@ -39,9 +41,10 @@ public class MainForMemberDao {
 	
 	private static void updateMember(){
 		System.out.println("---- updateMmeber");
-		Member member = memberDao.selectByEmail("0809161307@test.com");
+		Member member = memberDao.selectByEmail("dlgustlr45@naver.com");
 		String oldPw = member.getPassword();
-		String newPw = Double.toHexString(Math.random());
+		//String newPw = Double.toHexString(Math.random());
+		String newPw = "1234";
 		member.changePassword(oldPw, newPw);
 		
 		memberDao.update(member);
@@ -58,5 +61,4 @@ public class MainForMemberDao {
 		System.out.println(member.getId() + "데이터 추가");
 		
 	}
-
 }
