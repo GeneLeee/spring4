@@ -76,7 +76,7 @@ public class MemberDao {
 	//기존 update 메서드
 	public void update(Member member){
 		jdbcTemplate.update(
-				"update MEMBER set NAME = ?, PASSWORD = ?, where EMAIL = ?",
+				"update MEMBER set NAME = ?, PASSWORD = ? where EMAIL = ?",
 				member.getName(), member.getPassword(), member.getEmail());
 	}
 
@@ -144,9 +144,8 @@ public class MemberDao {
 					100);
 					
 		*/
-
 		Integer count = jdbcTemplate.queryForObject(
-				"select count(*) form MEMBER", Integer.class);
+				"select count(*) from MEMBER", Integer.class);
 		return count;
 	}
 	

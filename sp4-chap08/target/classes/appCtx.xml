@@ -4,21 +4,21 @@
 	xmlns:aop="http://www.springframework.org/schema/aop"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
-		http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/aop
-		http://www.springframework.org/schema/aop/spring-aop.xsd">
+		http://www.springframework.org/schema/beans/spring-beans.xsd">
 		
 	<bean id ="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
 		destroy-method="close" >
-		<property name="driverClass" value="com.mysql.jdbc.Drive"/>
+		<property name="driverClass" value="com.mysql.jdbc.Driver"/>
 		<property name="jdbcUrl" 
 			value="jdbc:mysql://localhost/spring4fs?characterEncoding=utf8" />
-		<property name="user" value="spring4" />
-		<property name="password" value="spring4" />
+		<property name="user" value="root" />
+		<property name="password" value="13245" />
 		
 		<!-- 커넥션 풀의 최대 크기를 100으로 지정하고, 10분 동안 Connection이 사용되지 않으면 풀에서 Connection을 제거 하도록 지정 -->
+		<!-- 
 		<property name="maxSizePoolSize" value="100" />
 		<property name="maxIdleTime" value="600" />
+		 -->
 	</bean>
 	
 	<bean id = "memberDao" class="spring.MemberDao" >
