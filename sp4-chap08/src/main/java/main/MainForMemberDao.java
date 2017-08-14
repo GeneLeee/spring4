@@ -23,8 +23,15 @@ public class MainForMemberDao {
 		memberDao = ctx.getBean("memberDao", spring.MemberDao.class);
 		
 		selectAll();
-		updateMember();
-		insertMember();
+		//updateMember();
+		//insertMember();
+		
+		/* DELETE 성공
+		memberDao.myDelete("dlgustlr45@hanmail.com");
+		System.out.println("delete testing!!!");
+		selectAll();
+		*/
+		
 		
 		ctx.close();
 	}

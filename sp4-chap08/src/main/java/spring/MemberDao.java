@@ -149,4 +149,10 @@ public class MemberDao {
 		return count;
 	}
 	
+	
+	//testing
+	public void myDelete(String email){
+		jdbcTemplate.update(
+				"delete FROM MEMBER WHERE EMAIL = ?", email);
+	}
 }
