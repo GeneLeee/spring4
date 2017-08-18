@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2011/XMLSchema-instance"
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xmlns="http://java.sun.com/xml/ns/javaee"
 		 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 		 	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
@@ -26,7 +26,7 @@
 	
 	<servlet-mapping>
 	<!-- 모든 요청을 DispatcherServlet이 처리하도록 서블릿 매핑을 설정했다. -->
-		<servlet-name->dispatcher</servlet-name->
+		<servlet-name>dispatcher</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 	
