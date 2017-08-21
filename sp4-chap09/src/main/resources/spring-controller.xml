@@ -6,5 +6,7 @@
 		http://www.springframework.org/schema/beans/spring-beans.xsd">
 		
 	<bean class="chap09.HelloController" />
+	
+	<bean class="chap09.ControllerTest" />
 		
 </beans>
