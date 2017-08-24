@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class RegisterController {
 	
 	@RequestMapping("/register/step1")
-	public String handlerStep1(){
+	public String handleStep1() {
 		return "register/step1";
 	}
 }

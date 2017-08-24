@@ -11,11 +11,12 @@
 	<tx:annotation-driven transaction-manager="transactionManager" />
 	
 	<bean id ="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
-			destroy-method="close" >
-			<property name="driverClass" value="com.mysql.jdbc.Driver"/>
-			<property name="jdbcUrl" value="jdbc:mysql://localhost/spring4fs?characterEncoding=utf8"/>
-			<property name="user" value="root" />
-			<property name="password" value="13245" />
+		destroy-method="close" >
+		<property name="driverClass" value="com.mysql.jdbc.Driver"/>
+		<property name="jdbcUrl" 
+			value="jdbc:mysql://localhost/spring4fs?characterEncoding=utf8" />
+		<property name="user" value="root" />
+		<property name="password" value="13245" />
 	</bean>
 	
 	<bean id ="transactionManager"
@@ -23,12 +24,12 @@
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 	
-	<bean id ="memberDao" class="srping.MemberDao" >
+	<bean id ="memberDao" class="spring.MemberDao" >
 		<constructor-arg ref="dataSource" />
 	</bean>
 	
 	<bean id="changePwdSvc" class="spring.ChangePasswordService">
-		<constructor-arg ref="memberDao" />
+		<constructor-arg ref="memberDao"/>
 	</bean>
 		
 </beans>
